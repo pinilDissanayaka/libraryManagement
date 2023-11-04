@@ -102,3 +102,4 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
 require __DIR__.'/auth.php';
 
+// Commit made 365 days ago
