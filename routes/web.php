@@ -18,7 +18,7 @@ use App\Http\Controllers\WishListController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
 // 'user (auth)' middleware group
 Route::middleware(['auth', 'verified'])->group(function () {

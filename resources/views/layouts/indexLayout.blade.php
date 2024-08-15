@@ -33,7 +33,7 @@
     <header id="header" class="header d-flex align-items-center sticky-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-            <a href="index.html" class="logo d-flex align-items-center me-auto">
+            <a href="{{ route('index') }}" class="logo d-flex align-items-center me-auto">
                 <h1 class="">ShelfSpace</h1>
             </a>
 
@@ -76,7 +76,8 @@
                         <p>A108 Adam Street</p>
                         <p>New York, NY 535022</p>
                         <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-                        <p><strong>Email:</strong> <span>info@example.com</span></p>
+                        <p><strong>Email:</strong> <span>info@shelfspace.com</span></p>
+                        <p class="mt-3"><strong>Opening Hours :</strong> <span>Monday to Friday: 9:00 AM - 6:00 PM, Saturday: 10:00 AM - 4:00 PM</span></p>
                     </div>
                     <div class="social-links d-flex mt-4">
                         <a href=""><i class="bi bi-twitter"></i></a>
@@ -97,17 +98,6 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Product Management</a></li>
-                        <li><a href="#">Marketing</a></li>
-                        <li><a href="#">Graphic Design</a></li>
-                    </ul>
-                </div>
-
                 <div class="col-lg-4 col-md-12 footer-newsletter">
                     <h4>Our Newsletter</h4>
                     <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
@@ -125,7 +115,7 @@
         <div class="container copyright text-center mt-4">
             <p>© <span>Copyright</span> <strong class="px-1">ShelfSpace</strong> <span>All Rights Reserved</span></p>
             <div class="credits">
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                Designed by <a href="#"></a>
             </div>
         </div>
 
