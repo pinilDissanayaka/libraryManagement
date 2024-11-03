@@ -52,3 +52,10 @@ npm run dev
 php artisan serve
 ```
 The project should now be running on http://localhost:8000.
+
+
+![Screenshot 2024-09-12 104804](https://github.com/user-attachments/assets/b6258b20-44ec-4dc4-9d9f-3e3895603fcb)
+![Screenshot 2024-09-12 104750](https://github.com/user-attachments/assets/844b65ef-f066-4248-b1c6-b2cc8930eae7)
+![Screenshot 2024-09-12 104702](https://github.com/user-attachments/assets/1d33aa0f-95a2-4c6c-9f61-559a4b329117)
+![Screenshot 2024-09-12 104824](https://github.com/user-attachments/assets/83dcc23a-dd03-4daf-b4af-c49bc057656c)
+
