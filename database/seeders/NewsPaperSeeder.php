@@ -13,7 +13,7 @@ class NewsPaperSeeder extends Seeder
      */
     public function run(): void
     {
-        foreach(range(1,500) as $index) {
+        foreach(range(1,1500) as $index) {
             NewsPaper::create([
                 'title' => 'title'.$index,
                 'publisher' => 'publisher'.$index,

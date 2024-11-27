@@ -13,7 +13,7 @@ class MagazineSeeder extends Seeder
      */
     public function run(): void
     {
-        foreach(range(1,500) as $index) {
+        foreach(range(1,1500) as $index) {
             Magazine::create([
                 'title' => 'title'.$index,
                 'publisher' => 'publisher'.$index,

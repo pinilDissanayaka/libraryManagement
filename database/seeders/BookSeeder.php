@@ -14,7 +14,7 @@ class BookSeeder extends Seeder
      */
     public function run(): void
     {
-        foreach(range(1,500) as $index) {
+        foreach(range(1,1500) as $index) {
             Book::create([
                 'title' => 'title'.$index,
                 'author' => 'author'.$index,
