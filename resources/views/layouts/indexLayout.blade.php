@@ -73,10 +73,10 @@
                         <span class="">ShelfSpace</span>
                     </a>
                     <div class="footer-contact pt-3">
-                        <p>A108 Adam Street</p>
-                        <p>New York, NY 535022</p>
-                        <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-                        <p><strong>Email:</strong> <span>info@shelfspace.com</span></p>
+                        <p>The Library, Sabaragamuwa University of Sri Lanka</p>
+                        <p>P.O Box 02, 70140, Belihuloya, Sri Lanka</p>
+                        <p class="mt-3"><strong>Phone:</strong> <span>+(94)-(0)45-2280045 (Main Library)</span></p>
+                        <p><strong>Email:</strong> <span>library@lib.sab.ac.lk</span></p>
                         <p class="mt-3"><strong>Opening Hours :</strong> <span>Monday to Friday: 9:00 AM - 6:00 PM, Saturday: 10:00 AM - 4:00 PM</span></p>
                     </div>
                     <div class="social-links d-flex mt-4">
@@ -85,17 +85,6 @@
                         <a href=""><i class="bi bi-instagram"></i></a>
                         <a href=""><i class="bi bi-linkedin"></i></a>
                     </div>
-                </div>
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Terms of service</a></li>
-                        <li><a href="#">Privacy policy</a></li>
-                    </ul>
                 </div>
 
                 <div class="col-lg-4 col-md-12 footer-newsletter">

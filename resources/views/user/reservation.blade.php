@@ -67,26 +67,7 @@
                                                     <form method="POST" action="{{ route('user_delete_reservation', $reservation->id)}}">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#cancelReservationsModel">Cancel</button>
-                                                        <!-- cancel Reservations Modal -->
-                                                        <div class="modal fade" id="cancelReservationsModel" tabindex="-1">
-                                                            <div class="modal-dialog">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                        <h5 class="modal-title">Cancel Reservation</h5>
-                                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                                    </div>
-                                                                    <div class="modal-body">
-                                                                        Once deleted, all of its resources and data will be permanently deleted. Before deleting, please download any data or information that you wish to retain.
-                                                                    </div>
-                                                                    <div class="modal-footer">
-                                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                                        <button type="submit" class="btn btn-danger">Cancel Reservation</button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- Cancel Revervations Modal-->
+                                                        <button type="submit" class="btn btn-danger">Cancel</button>
                                                     </form>
                                                 @endif
                                             </div>
