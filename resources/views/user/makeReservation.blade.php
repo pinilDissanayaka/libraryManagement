@@ -23,7 +23,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Make New Reservation</h5>
-                    <!-- Make Revervation Form -->
+                    <!-- Make Reservation Form -->
                     @if (session('status'))
                         <div class="alert alert-warning alert-dismissible fade show" role="alert">
                             <i class="bi bi-exclamation-circle"></i>
