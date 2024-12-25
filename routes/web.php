@@ -11,6 +11,7 @@ use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\FineController;
 use App\Http\Controllers\WishListController;
+use App\Http\Controllers\NoticeController;
 
 
 
@@ -96,6 +97,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin-get-fine-details', [FineController::class, 'showFineDetailsAdmin'])->name('admin_get_fine_details');
     Route::post('/admin-store-paid-fine', [FineController::class, 'storePaidFineAdmin'])->name('admin_store_paid_fine');
     Route::get('/admin-get-fine-history', [FineController::class, 'getFineHistoryAdmin'])->name('admin_get_fine_history');
+
+    Route::get('/admin-notices', [NoticeController::class, 'getAllNoticesAdmin'])->name('admin_notices');
+    Route::get('/admin-add-notice', [NoticeController::class, 'addNoticeAdmin'])->name('admin_addNotice');
+    Route::post('/admin-add-book', [NoticeController::class, 'storeNoticeAdmin'])->name('admin_store_notice');
 
 });
 

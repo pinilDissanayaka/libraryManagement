@@ -1,16 +1,16 @@
 @extends('layouts.adminLayout')
 
 @section('title')
-  <title>Admin - Books</title>
+  <title>Admin - Notices</title>
 @endsection
 
 @section('main')
 <div class="pagetitle">
-    <h1>Books</h1>
+    <h1>Notices</h1>
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('admin_dashboard')}}">Home</a></li>
-            <li class="breadcrumb-item active"><a href="{{route('')}}">Notices</li>
+            <li class="breadcrumb-item active"><a href="{{route('admin_notices')}}">Notices</li>
         </ol>
     </nav>
 </div>
@@ -18,7 +18,7 @@
 
 <section class="section">
     <div class='card-body'>
-        <button type="submit" class="btn btn-success"><a href="{{route('admin_addBook')}}"><i class="bi bi-file-earmark-plus"> </i> Add New</a></button>
+        <button type="submit" class="btn btn-success"><a href="{{route('admin_addNotice')}}"><i class="bi bi-file-earmark-plus"> </i> Add New</a></button>
         <button type="reset" class="btn btn-danger"><a href="">Print Preview</a></button>
         <button type="reset" class="btn btn-danger"><a href="">Save CSV</a></button>
     </div>
@@ -56,28 +56,11 @@
                                     <td>
                                         @if (($notice -> status) == 'Active')
                                             <span class="badge rounded-pill bg-success">Active</span>
-                                        @elseif (($notice -> status) == 'Canceled')
-                                            <span class="badge rounded-pill bg-danger">Canceled</span>
+                                        @elseif (($notice -> status) == 'Cancelled')
+                                            <span class="badge rounded-pill bg-danger">Cancelled</span>
                                         @endif
                                     </td>
-                                    <!--
-                                    <td>
-                                        <div class='text-center'>
-                                            <div class="btn-group" role="group">
-                                                <form method="POST" action="{{route()}}">
-                                                    @csrf
-                                                    @method('GET')
-                                                    <button type="submit" class="btn btn-info">View</button>
-                                                </form>
-                                                <form method="POST" action="{{ route() }}">
-                                                    @csrf
-                                                    @method('GET')
-                                                    <button type="submit" class="btn btn-success">Edit</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </td>
-                                -->
+
                                 </tr>
                             @endforeach
                         </tbody>

@@ -154,6 +154,14 @@
             <!-- End Fine History Nav -->
 
             <li class="nav-item">
+                <a class="nav-link" href="{{ route('admin_notices')}}">
+                    <i class="bi bi-bell"></i>
+                    <span>Notices</span>
+                </a>
+            </li>
+            <!-- End Fine History Nav -->
+
+            <li class="nav-item">
                 <a class="nav-link " href="{{route('profile_edit')}}">
                     <i class="bi bi-gear"></i>
                     <span>Account Settings</span>
