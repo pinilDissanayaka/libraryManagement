@@ -112,9 +112,11 @@
                 @foreach($notices as $notice)
                     <div class="card add-book overflow-auto">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $notice -> title }} <span> {{ $notice -> publicationDate }}</span></h5>
+                            <h5 class="card-title">{{ $notice -> title }} <span> | {{ $notice -> publicationDate }}</span></h5>
                             <div class="card-body">
-                                <p class="fst-italic"> {{ $notice -> content}} </p>
+                                <p class="card-text"> {{ $notice -> content}} </p>
+                                <p class="card-text">By </p>
+                                <p class="fst-italic">{{ $notice -> author }} </p>
                             </div>
                         </div>
                     </div>
