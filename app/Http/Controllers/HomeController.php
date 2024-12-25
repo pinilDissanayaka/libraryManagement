@@ -37,7 +37,7 @@ class HomeController extends Controller
 
         $totalReservedBookCount = Reservation::where('member_id', $member_id)->where('status', 'Reserved')->count();
 
-        $notices = Notice::all();
+        $notices = Notice::all()->where('status', "Active");
 
         return view('user.userDashboard', ['notifications' => $notifications, "totalBorrowedBookCount"=> $totalBorrowedBookCount, "totalReservedBookCount" => $totalReservedBookCount, "notices" => $notices]);
     }
