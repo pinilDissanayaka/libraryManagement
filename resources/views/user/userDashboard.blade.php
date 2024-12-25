@@ -68,34 +68,34 @@
                     <div class="activity">
 
                         @foreach ($notifications as $notification)
-                        @if ($notification['type'] == 'Borrowed')
+                            @if ($notification['type'] == 'Borrowed')
+                                <div class="activity-item d-flex">
+                                    <div class="activite-label">{{$notification['created_at']}}</div>
+                                    <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
+                                    <div class="activity-content">
+                                        {{$notification['type']}} Book {{ $notification['title']}} with {{$notification['ISBN']}} ISBN. It should be return on or before {{$notification['due_date']}}.
+                                    </div>
+                                </div>
+                                <!-- End activity item-->
+                            @elseif ($notification['type'] == 'Return')
                             <div class="activity-item d-flex">
                                 <div class="activite-label">{{$notification['created_at']}}</div>
-                                <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
+                                <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
                                 <div class="activity-content">
-                                    {{$notification['type']}} Book {{ $notification['title']}} with {{$notification['ISBN']}} ISBN. It should be return on or before {{$notification['due_date']}}.
+                                    {{$notification['type']}} Book {{ $notification['title']}} with {{$notification['ISBN']}} ISBN.
                                 </div>
                             </div>
-                            <!-- End activity item-->
-                        @elseif ($notification['type'] == 'Return')
-                        <div class="activity-item d-flex">
-                            <div class="activite-label">{{$notification['created_at']}}</div>
-                            <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
-                            <div class="activity-content">
-                                {{$notification['type']}} Book {{ $notification['title']}} with {{$notification['ISBN']}} ISBN.
-                            </div>
-                        </div>
 
-                        @elseif ($notification['type'] == 'Pay')
-                        <div class="activity-item d-flex">
-                            <div class="activite-label">{{$notification['created_at']}}</div>
-                            <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
-                            <div class="activity-content">
-                                Should be  {{$notification['type']}} Rs. {{ $notification['fine']}} for over due book.
+                            @elseif ($notification['type'] == 'Pay')
+                            <div class="activity-item d-flex">
+                                <div class="activite-label">{{$notification['created_at']}}</div>
+                                <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
+                                <div class="activity-content">
+                                    Should be  {{$notification['type']}} Rs. {{ $notification['fine']}} for over due book.
+                                </div>
                             </div>
-                        </div>
 
-                        @endif
+                            @endif
                         @endforeach
                     </div>
                 </div>
@@ -105,6 +105,26 @@
     </div>
 
 
-    
+    <div class="row">
+        <!-- books -->
+        <div class="col-12">
+            @if($notices)
+                @foreach($notices as $notice)
+                    <div class="card add-book overflow-auto">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $notice -> title }} <span> {{ $notice -> publicationDate }}</span></h5>
+                            <div class="card-body">
+                                <p class="fst-italic"> {{ $notice -> content}} </p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            @endif
+        </div>
+        <!-- End Book  -->
+    </div>
+
+
+
 </section>
 @endsection
