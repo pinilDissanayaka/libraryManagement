@@ -19,6 +19,11 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     //
+    public function index(){
+        return view('index');
+    }
+
+
     public function indexAdmin() {
         $bookCount=Book::count();
         $userCount=User::count();

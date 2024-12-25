@@ -16,9 +16,7 @@ use App\Http\Controllers\NoticeController;
 
 
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+Route::get('/', [HomeController::class, 'index'])->name('index');
 
 // 'user (auth)' middleware group
 Route::middleware(['auth', 'verified'])->group(function () {
