@@ -29,7 +29,6 @@
                     <form method="POST" action="{{ route('admin_store_paid_fine') }}">
                         @csrf
                         @method('post')
-
                         <div class="row mb-3">
                             <label for="transactionId" class="col-sm-2 col-form-label">Transaction ID</label>
                             <div class="col-sm-10">
