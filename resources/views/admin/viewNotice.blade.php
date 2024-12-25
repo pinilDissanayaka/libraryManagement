@@ -19,7 +19,7 @@
 
 <section class="section">
     <div class='card-body'>
-        <button type="submit" class="btn btn-success"><a href="">Edit</a></button>
+        <button type="submit" class="btn btn-success"><a href="{{route('admin_edit_notice', ['notice'=> $notice])}}">Edit</a></button>
         <button type="reset" class="btn btn-primary"><a href="">Print Preview</a></button>
         <button type="reset" class="btn btn-dark"><a href="">Save CSV</a></button>
     </div>

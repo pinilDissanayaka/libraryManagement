@@ -102,7 +102,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin-add-notice', [NoticeController::class, 'addNoticeAdmin'])->name('admin_addNotice');
     Route::post('/admin-add-book', [NoticeController::class, 'storeNoticeAdmin'])->name('admin_store_notice');
     Route::get('/{notice}/admin-view-notice', [NoticeController::class, 'viewNoticeAdmin'])->name('admin_view_notice');
-
+    Route::get('/{notice}/admin-edit-notice', [NoticeController::class, 'editNoticeAdmin'])->name('admin_edit_notice');
+    Route::put('{notice}/admin-update-notice', [NoticeController::class, 'updateNoticeAdmin'])->name('admin_update_notice');
 });
 
 require __DIR__.'/auth.php';

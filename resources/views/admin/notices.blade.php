@@ -56,8 +56,8 @@
                                     <td>
                                         @if (($notice -> status) == 'Active')
                                             <span class="badge rounded-pill bg-success">Active</span>
-                                        @elseif (($notice -> status) == 'Cancelled')
-                                            <span class="badge rounded-pill bg-danger">Cancelled</span>
+                                        @elseif (($notice -> status) == 'Inactive')
+                                            <span class="badge rounded-pill bg-danger">Inactive</span>
                                         @endif
                                     </td>
                                     <td>
@@ -67,6 +67,11 @@
                                                     @csrf
                                                     @method('GET')
                                                     <button type="submit" class="btn btn-info">View</button>
+                                                </form>
+                                                <form method="POST" action="{{route('admin_edit_notice', ['notice'=> $notice])}}">
+                                                    @csrf
+                                                    @method('GET')
+                                                    <button type="submit" class="btn btn-success">Edit</button>
                                                 </form>
                                           </div>
                                         </div>

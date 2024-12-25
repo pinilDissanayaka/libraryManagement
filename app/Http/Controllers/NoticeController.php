@@ -36,4 +36,24 @@ class NoticeController extends Controller
         return view('admin.viewNotice' ,['notice' => $notice]);
     }
 
+    public function editNoticeAdmin(Notice $notice){
+        return view('admin.editNotice', ['notice' => $notice]);
+    }
+
+
+
+    public function updateNoticeAdmin(Notice $notice, Request $request){
+        $data=$request->validate([
+            'title'=>'required',
+            'author'=>'required',
+            'publicationDate'=>'required',
+            'content'=>'required',
+            'status'=>'required'
+        ]);
+
+        $notice-> update($data);
+
+        return redirect(route('admin_books'))->with('success', 'Notice edited successfully');
+    }
+
 }
