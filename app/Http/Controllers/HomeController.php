@@ -33,9 +33,9 @@ class HomeController extends Controller
 
         $notifications = Notification::where('member_id', $member_id)->get();
 
-        $totalBorrowedBookCount = Transaction::where('member_id', $member_id)->whereNotNull('return_date')->count();
+        $totalBorrowedBookCount = Transaction::where('member_id', $member_id)->count();
 
-        $totalReservedBookCount = Reservation::where('member_id', $member_id)->where('status', 'Reserved')->count();
+        $totalReservedBookCount = Reservation::where('member_id', $member_id)->count();
 
         $notices = Notice::all()->where('status', "Active");
 
