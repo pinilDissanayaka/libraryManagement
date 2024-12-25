@@ -52,10 +52,6 @@
                     @endif
                 @else
                     <a href="{{ route('login') }}" class="btn-getstarted">Log in</a>
-
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="btn-getstarted">Register</a>
-                    @endif
                 @endauth
             @endif
         </div>
