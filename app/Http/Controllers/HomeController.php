@@ -7,6 +7,8 @@ use App\Models\User;
 use App\Models\NewsPaper;
 use App\Models\Magazine;
 use App\Models\Notification;
+use App\Models\Transaction;
+use App\Models\Reservation;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -30,7 +32,11 @@ class HomeController extends Controller
 
         $notifications = Notification::where('member_id', $member_id)->get();
 
-        return view('user.userDashboard', ['notifications' => $notifications]);
+        $totalBorrowedBookCount = Transaction::where('member_id', $member_id)->whereNotNull('return_date')->count();
+
+        $totalReservedBookCount = Reservation::where('member_id', $member_id)->where('status', 'Reserved')->count();
+
+        return view('user.userDashboard', ['notifications' => $notifications, "totalBorrowedBookCount"=> $totalBorrowedBookCount, "totalReservedBookCount" => $totalReservedBookCount]);
     }
 
 }
