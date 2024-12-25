@@ -174,7 +174,7 @@
 
     <main id="main" class="main">
         @yield('main')
-    </main><!-- End #main -->
+    </main><!-- End main -->
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
@@ -182,7 +182,7 @@
             &copy; Copyright <strong><span>ShelfSpace</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            Designed by <a href="#">ShelfSpace</a>
         </div>
     </footer><!-- End Footer -->
 

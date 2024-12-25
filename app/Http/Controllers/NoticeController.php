@@ -31,9 +31,9 @@ class NoticeController extends Controller
         return redirect(route('admin.addNotice'))->with('success', 'Notice added successfully');
     }
 
-    public function viewBookAdmin(Notice $notice){
+    public function viewNoticeAdmin(Notice $notice){
 
-        return view('admin.viewBook' ,['notice' => $notice]);
+        return view('admin.viewNotice' ,['notice' => $notice]);
     }
 
 }

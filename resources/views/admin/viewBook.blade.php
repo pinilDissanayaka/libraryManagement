@@ -64,15 +64,15 @@
                         <div class="col-lg-9 col-md-8"> {{ $book -> shelfLocation}}  </div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-lg-3 col-md-4 label ">Created</div>
+                        <div class="col-lg-3 col-md-4 label ">Status</div>
                         <div class="col-lg-9 col-md-8"> {{ $book -> status}}  </div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-lg-3 col-md-4 label ">Created</div>
+                        <div class="col-lg-3 col-md-4 label ">Created At</div>
                         <div class="col-lg-9 col-md-8"> {{ $book -> created_at}}  </div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-lg-3 col-md-4 label ">Updated</div>
+                        <div class="col-lg-3 col-md-4 label ">Updated At</div>
                         <div class="col-lg-9 col-md-8"> {{ $book -> updated_at}}  </div>
                     </div>
                 </div>

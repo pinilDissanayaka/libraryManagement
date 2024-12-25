@@ -60,7 +60,17 @@
                                             <span class="badge rounded-pill bg-danger">Cancelled</span>
                                         @endif
                                     </td>
-
+                                    <td>
+                                        <div class='text-center'>
+                                            <div class="btn-group" role="group">
+                                                <form method="POST" action="{{route('admin_view_notice', ['notice' => $notice])}}">
+                                                    @csrf
+                                                    @method('GET')
+                                                    <button type="submit" class="btn btn-info">View</button>
+                                                </form>
+                                          </div>
+                                        </div>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
